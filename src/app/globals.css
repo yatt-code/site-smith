@@ -3,6 +3,9 @@
 @tailwind utilities;
 
 :root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
   --background: #ffffff;
   --foreground: #171717;
 }
@@ -12,6 +15,32 @@
     --background: #0a0a0a;
     --foreground: #ededed;
   }
+}
+
+.bg-grid {
+  background-size: 20px 20px;
+  background-image: 
+    linear-gradient(to right, #e5e7eb 1px, transparent 1px),
+    linear-gradient(to bottom, #e5e7eb 1px, transparent 1px);
+}
+
+/* Dragging styles */
+.dragging {
+  opacity: 0.5;
+  cursor: grabbing !important;
+}
+
+.dragging * {
+  pointer-events: none;
+}
+
+/* Component hover and selection styles */
+.component-hover {
+  outline: 2px solid #93c5fd;
+}
+
+.component-selected {
+  outline: 2px solid #3b82f6;
 }
 
 body {
